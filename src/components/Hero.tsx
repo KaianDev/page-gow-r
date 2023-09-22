@@ -1,11 +1,21 @@
+import { useEffect } from "react";
 import { BulletLabel } from "./BulletLabel";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Hero = () => {
+    useEffect(() => {
+        Aos.init();
+        Aos.refresh();
+    }, []);
+
     return (
         <section className="bg-[url('/assets/bg-hero.jpg')] bg-cover bg-center">
-            <div className="min-h-[800px] container mx-auto px-2 flex gap-5 flex-col lg:flex-row">
+            <div className="min-h-[800px] container mx-auto px-4 flex gap-5 flex-col lg:flex-row">
                 {/* Infos */}
-                <div className="text-center lg:text-start flex flex-col items-center lg:items-start mt-14 lg:mt-40 flex-1 mb-4 lg:mb-0">
+                <div
+                    className="text-center lg:text-start flex flex-col items-center lg:items-start mt-14 lg:mt-40 flex-1 mb-4 lg:mb-0"
+                    data-aos="fade-right" data-aos-duration='800'>
                     <BulletLabel label="Lançamento dia 09/11/2022" />
                     <h1 className="lg:max-w-[782px] text-[60px] sm:text-[90px] lg:text-[100px] xl:text-[124px]  font-bold leading-[97.5%] mb-[18px]">
                         God of War Ragnarök
@@ -24,7 +34,7 @@ export const Hero = () => {
                     </div>
                 </div>
                 {/* Thumb */}
-                <div className="lg:self-end lg:mb-28 flex w-full lg:w-auto flex-col items-center lg:items-start">
+                <div className="lg:self-end mb-10 lg:mb-28 flex w-full lg:w-auto flex-col items-center lg:items-start">
                     <p className="text-[18px] font-bold mb-4">
                         Assista aos trailer
                     </p>

@@ -1,6 +1,6 @@
 export const Nav = () => {
     return (
-        <nav className="container mx-auto px-2 h-[70px] md:h-20 flex items-center justify-between">
+        <nav className="container mx-auto px-4 h-[70px] md:h-20 flex items-center justify-between">
             <a href="/" className="hidden lg:inline-block">
                 <img src="/assets/sony.svg" alt="Logo PlayStation" />
             </a>
